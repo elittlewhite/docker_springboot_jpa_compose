@@ -1,26 +1,5 @@
-### prerequisite
-* [Install Docker](https://www.docker.com/)
-* [Install JDK](https://adoptopenjdk.net/)
-* [Install Maven 3](https://maven.apache.org/install.html)
-* [Install Git](https://www.atlassian.com/git/tutorials/install-git)
 
-### Spring Boot
-* [Spring Initializr](https://start.spring.io/)
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.6/maven-plugin/reference/html/)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.6/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.6.6/reference/htmlsingle/#boot-features-jpa-and-spring-data)
 
-### Tomcat
-* [Tomcat](https://tomcat.apache.org/download-80.cgi)
-
-### JPA / Hibernate
-* [OSIV](https://medium.com/@rafaelralf90/open-session-in-view-is-evil-fd9a21645f8e)
-* [CascadeType/FetchType](https://openhome.cc/Gossip/EJB3Gossip/CascadeTypeFetchType.html)
-* [lazyinitializationexception](https://matthung0807.blogspot.com/2020/11/spring-data-jpa-one-to-many-lazyinitializationexception.html)
-* [JPA Concepts](https://tomee.apache.org/jpa-concepts.html)
-* [N+1](https://www.javacodemonk.com/n-1-problem-in-hibernate-spring-data-jpa-894097b9)
-* [find query executed](https://dataedo.com/kb/query/mysql/find-last-query-executed-by-session)
 
 ### script
 ```

@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    max-connections: 50
+  
+logging:
+  config: classpath:log4j2.xml
+
+spring:
+  application:
+    name: mvc
+  
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+  
+  # admin
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://mysql:3306/demo?useUnicode=true&characterEncoding=utf8
+    username: admin
+    password: admin
+    
+    hikari:
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      minimum-idle: 1
+      maximum-pool-size: 5     

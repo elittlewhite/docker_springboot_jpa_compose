@@ -1,8 +1,4 @@
 
-
-
-### script
-
 # use docker-compose
 $ docker-compose build
 $ docker-compose up -d
@@ -71,4 +67,4 @@ $ docker rmi mysql:5.7
 #
 $ docker network rm demo-bridge
 $ docker volume rm demo-volume
-```
+

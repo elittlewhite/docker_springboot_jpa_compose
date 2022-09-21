@@ -2,7 +2,17 @@
 
 
 ### script
-```
+
+# use docker-compose
+$ docker-compose build
+$ docker-compose up -d
+
+$ docker-compose down
+$ docker-compose down -v
+
+$ docker-compose stop
+$ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml stop
+
 # create network & volume
 #
 $ docker network create -d bridge demo-bridge
@@ -17,7 +27,17 @@ $ docker run -d --name mysql \
     -e MYSQL_ROOT_PASSWORD=root \
     -e MYSQL_USER=admin \
     -e MYSQL_PASSWORD=admin \
-    -p 3306:3306 mysql:5.7  
+    -p 3306:3306 mysql:5.7
+
+# FOR MAC M1
+$ docker run -d --name mysql \
+    --network demo-bridge \
+    -v demo-volume:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=root \
+    -e MYSQL_USER=admin \
+    -e MYSQL_PASSWORD=admin \
+    --platform linux/x86_64 \
+    -p 3306:3306 mysql:5.7
 
 # run mysql init sql
 #

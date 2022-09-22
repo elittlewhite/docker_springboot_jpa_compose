@@ -1,10 +1,22 @@
 
 # use docker-compose
+## 建立、重新建立容器用的映像檔
 $ docker-compose build
+
+## 確認IMAGE內容
+$ docker images
+
+### 建立容器、運行環境
 $ docker-compose up -d
 
+## 停用、刪除容器和網路，但保留volume和image
+$ docker-compose up -d
+## 停用、刪除容器和網路、volume，但保留image
+$ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml up -d
+
+###刪除容器、運行環境
 $ docker-compose down
-$ docker-compose down -v
+$ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml down -v
 
 $ docker-compose stop
 $ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml stop

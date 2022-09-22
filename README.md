@@ -30,6 +30,7 @@ $ docker-compose restart
 $ curl http://localhost:8080/skill/1
 ## 停用容器
 $ docker-compose stop
+
 $ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml stop
 
 ## ----------

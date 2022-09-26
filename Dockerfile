@@ -3,6 +3,7 @@ FROM maven:3.8.6-openjdk-8-slim AS build-env
 
 RUN mkdir -p /opt/build
 WORKDIR /opt/build
+# 把pom.xml添加到工作目錄
 COPY pom.xml ./
 # mvn verify 驗證專案正確性以及所有必要資訊已備妥
 # --fail-never 無論項目結果如何,構建從不失敗;
@@ -19,5 +20,5 @@ WORKDIR /opt/app
 # either using the local image name, a tag available locally or on a Docker registry, or a tag ID.
 COPY --from=build-env /opt/build/target/*.jar /opt/app/app.jar
 
-# 啟動容器時傳遞參數 反編譯單個class檔案 確認jar檔可否正常運行
+# 啟動容器時傳遞參數 使用「java -jar」指令來執行確認jar檔可否正常運行
 ENTRYPOINT ["java","-jar","app.jar"]

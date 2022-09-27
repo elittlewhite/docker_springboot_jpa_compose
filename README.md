@@ -16,7 +16,9 @@ $ docker-compose down
 $ docker volume ls
 $ docker images
 ## 停用、刪除容器和網路、volume，但保留image
-$ docker-compose -f /Users/kenwhite/docker-sample-code/docker_springboot_jpa_compose/docker-compose.yml down -v
+$ docker-compose down -v
+### 註: 可透過-f參數指定YAML檔路徑
+$ docker-compose -f [YAML檔路徑] down -v
 ## 看volume image是否仍存在
 $ docker volume ls
 $ docker images
